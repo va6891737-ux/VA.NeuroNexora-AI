@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NeuroNexora AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🧠 NeuroNexora AI
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#analysis">Analysis</a>
+            <a href="#ai-chat">💬 AI Chat</a>
+            <a href="#dashboard">Dashboard</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">
+                HUMAN-CENTRIC INTELLIGENCE
+            </p>
+
+            <h1>
+                NeuroNexora AI
+            </h1>
+
+            <h2>
+                Human-Centric Intelligent Decision Platform
+            </h2>
+
+            <p class="description">
+                Make smarter and more informed decisions using
+                personalized, explainable and comparable AI-assisted
+                recommendations.
+            </p>
+
+            <button onclick="startPlatform()">
+                🚀 Start Decision Analysis
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <h2>Platform Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <span>👤</span>
+                <h3>Personal Context</h3>
+                <p>
+                    Understand user preferences, skills and goals.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>🔍</span>
+                <h3>Decision Analysis</h3>
+                <p>
+                    Analyze different choices based on user context.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>📊</span>
+                <h3>Option Comparison</h3>
+                <p>
+                    Compare multiple options and their trade-offs.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <span>💡</span>
+                <h3>Explainable AI</h3>
+                <p>
+                    Understand why an option receives a particular score.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+<!-- User Profile Section -->
+<section id="profile" class="profile-section">
+
+    <p class="tagline">PERSONALIZED DECISION ANALYSIS</p>
+
+    <h2>👤 User Profile</h2>
+
+    <p class="section-description">
+        Tell NeuroNexora AI about yourself to generate
+        personalized decision-support insights.
+    </p>
+
+    <div class="profile-form">
+
+        <div class="input-group">
+            <label>👤 Your Name</label>
+            <input type="text" id="userName" placeholder="Enter your name">
+        </div>
+
+        <div class="input-group">
+            <label>🎓 Education</label>
+            <input type="text" id="education" placeholder="Example: BCA Final Year">
+        </div>
+
+        <div class="input-group">
+            <label>🎯 Career Goal</label>
+
+            <select id="careerGoal">
+                <option value="">Select your goal</option>
+                <option value="Software Engineering">
+                    Software Engineering
+                </option>
+                <option value="Data Analytics">
+                    Data Analytics
+                </option>
+                <option value="Web Development">
+                    Web Development
+                </option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>🛠️ Skills</label>
+            <input type="text" id="skills"
+                   placeholder="Example: Python, SQL, HTML">
+        </div>
+
+        <div class="input-group">
+            <label>⏱️ Available Learning Time</label>
+            <input type="text" id="timeAvailable"
+                   placeholder="Example: 10 hours/week">
+        </div>
+
+        <div class="input-group">
+            <label>💰 Budget</label>
+            <input type="text" id="budget"
+                   placeholder="Example: ₹10,000">
+        </div>
+
+    <button onclick="saveProfile()">
+    🧠 Save My Profile
+</button>
+
+    </div>
+
+</section>
+<!-- Decision Analysis Section -->
+<section id="analysis" class="analysis-section">
+
+    <p class="tagline">AI-POWERED ANALYSIS</p>
+
+    <h2>🔍 Decision Analysis</h2>
+
+    <p class="section-description">
+        NeuroNexora AI analyzes your profile and compares
+        different career options.
+    </p>
+
+    <div class="analysis-container">
+
+        <div class="option-card">
+            <div class="option-icon">💻</div>
+            <h3>Software Engineering</h3>
+            <p>Software development, programming and problem solving.</p>
+            <div class="score">
+                Compatibility: <strong>85%</strong>
+            </div>
+        </div>
+
+        <div class="option-card">
+            <div class="option-icon">📊</div>
+            <h3>Data Analytics</h3>
+            <p>SQL, data analysis, visualization and insights.</p>
+            <div class="score">
+                Compatibility: <strong>78%</strong>
+            </div>
+        </div>
+
+        <div class="option-card">
+            <div class="option-icon">🌐</div>
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript and web application development.</p>
+            <div class="score">
+                Compatibility: <strong>72%</strong>
+            </div>
+        </div>
+
+    </div>
+
+    <button onclick="analyzeDecision()">
+    🧠 Generate AI Analysis
+</button>
+<div id="analysisResult" class="analysis-result"></div>
+<button onclick="explainDecision()">
+    💡 Why This Recommendation?
+</button>
+
+<div id="xaiResult" class="xai-result"></div>
+
+</section>
+<!-- Comparison Dashboard -->
+<section id="dashboard" class="dashboard-section">
+
+    <p class="tagline">INTELLIGENT OPTION COMPARISON</p>
+
+    <h2>📊 Decision Dashboard</h2>
+
+    <p class="section-description">
+        Compare available options using indicative compatibility scores.
+    </p>
+    <button onclick="generateScores()">
+    📊 Generate Compatibility Scores
+</button>
+<div id="finalDecisionResult" class="final-decision-result"></div>
+<button onclick="generateFinalDecision()">
+    🧠 Generate Final Decision Summary
+</button>
+
+<div id="comparisonResult" class="comparison-result"></div>
+<button onclick="compareOptions()">
+    📊 Compare My Options
+</button>
+    <div class="comparison-table">
+
+        <div class="table-header">
+            <span>Career Option</span>
+            <span>Compatibility</span>
+            <span>Status</span>
+        </div>
+
+        <div class="table-row">
+            <span>💻 Software Engineering</span>
+            <span class="score-value">85%</span>
+            <span class="status">Available</span>
+        </div>
+
+        <div class="table-row">
+            <span>📊 Data Analytics</span>
+            <span class="score-value">78%</span>
+            <span class="status">Available</span>
+        </div>
+
+        <div class="table-row">
+            <span>🌐 Web Development</span>
+            <span class="score-value">72%</span>
+            <span class="status">Available</span>
+        </div>
+
+    </div>
+
+    <div class="score-box">
+
+        <h3>🧠 NeuroNexora AI Analysis</h3>
+
+        <p>
+            The platform compares multiple options and presents
+            compatibility information to support informed decision-making.
+        </p>
+
+        <div class="progress-item">
+            <p>Software Engineering — 85%</p>
+            <div class="progress">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <p>Data Analytics — 78%</p>
+            <div class="progress">
+                <div class="progress-fill" style="width: 78%;"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <p>Web Development — 72%</p>
+            <div class="progress">
+                <div class="progress-fill" style="width: 72%;"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<aside class="chat-sidebar">
+    <h3>🧠 NeuroNexora</h3>
+    <button onclick="newChat()">＋ New Chat</button>
+
+    <button onclick="document.getElementById('profile').scrollIntoView()">
+        👤 My Profile
+    </button>
+
+    <button onclick="document.getElementById('analysis').scrollIntoView()">
+        🔍 Decision Analysis
+    </button>
+
+    <button onclick="document.getElementById('dashboard').scrollIntoView()">
+        📊 Dashboard
+    </button>
+</aside>
+<!-- AI CHAT SECTION -->
+<section id="ai-chat" class="ai-chat-section">
+
+    <div class="ai-chat-header">
+        <h2>🧠 NeuroNexora AI Chat</h2>
+        <p>Ask anything about your decisions, career, education and future.</p>
+    </div>
+
+    <div id="chatArea" class="chat-area">
+
+        <div class="message ai-message">
+            🧠 Hello! I'm NeuroNexora AI.<br><br>
+            I can help you compare options, understand your goals,
+            and make informed decisions.
+        </div>
+
+    </div>
+
+    <div class="chat-input-area">
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Ask NeuroNexora AI..."
+        >
+
+        <button type ="button" onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+
+</section>
+    <!-- Footer -->
+    <footer>
+
+        <h3>🧠 NeuroNexora AI</h3>
+
+        <p>
+            Human-Centric Intelligent Decision Platform
+        </p>
+
+        <p>
+            © 2026 NeuroNexora AI
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #020617;
+    color: white;
+}
+
+/* Navigation */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.95);
+    border-bottom: 1px solid #164e63;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #22d3ee;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #22d3ee;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle at 50% 30%, #164e63, transparent 35%),
+        linear-gradient(135deg, #020617, #07132f, #020617);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.tagline {
+    color: #a78bfa;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    color: #22d3ee;
+    text-shadow: 0 0 30px #0891b2;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    color: #e0f2fe;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+/* Button */
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #06b6d4, #7c3aed);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Features */
+
+.features {
+    padding: 80px 7%;
+    text-align: center;
+    background: #030b1c;
+}
+
+.features > h2 {
+    font-size: 38px;
+    color: #c084fc;
+    margin-bottom: 45px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px 20px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid #164e63;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #22d3ee;
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.2);
+}
+
+.feature-card span {
+    font-size: 40px;
+}
+
+.feature-card h3 {
+    margin: 18px 0 12px;
+    color: #67e8f9;
+}
+
+.feature-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #020617;
+    border-top: 1px solid #164e63;
+}
+
+footer h3 {
+    color: #22d3ee;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #94a3b8;
+    margin: 8px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* User Profile */
+
+.profile-section {
+    padding: 80px 7%;
+    text-align: center;
+    background: #020617;
+}
+
+.profile-section h2 {
+    font-size: 40px;
+    color: #a78bfa;
+    margin: 15px 0;
+}
+
+.section-description {
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.profile-form {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #164e63;
+    border-radius: 20px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #67e8f9;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    font-size: 15px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #22d3ee;
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+/* Decision Analysis */
+
+.analysis-section {
+    padding: 80px 7%;
+    text-align: center;
+    background: #030b1c;
+}
+
+.analysis-section h2 {
+    font-size: 40px;
+    color: #a78bfa;
+    margin: 15px 0;
+}
+
+.analysis-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.option-card {
+    padding: 30px 20px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #164e63;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.option-card:hover {
+    transform: translateY(-8px);
+    border-color: #22d3ee;
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.25);
+}
+
+.option-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.option-card h3 {
+    color: #67e8f9;
+    margin-bottom: 15px;
+}
+
+.option-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.score {
+    margin-top: 20px;
+    color: #c084fc;
+    font-size: 18px;
+}
+
+.score strong {
+    color: #34d399;
+}
+/* Decision Dashboard */
+
+.dashboard-section {
+    padding: 80px 7%;
+    text-align: center;
+    background: #030b1c;
+}
+
+.dashboard-section h2 {
+    font-size: 40px;
+    color: #60a5fa;
+    margin: 15px 0;
+}
+
+.comparison-table {
+    max-width: 900px;
+    margin: 40px auto;
+    border: 1px solid #164e63;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 20px;
+    gap: 15px;
+    text-align: left;
+}
+
+.table-header {
+    background: #0f172a;
+    color: #67e8f9;
+    font-weight: bold;
+}
+
+.table-row {
+    background: rgba(15, 23, 42, 0.75);
+    color: #cbd5e1;
+    border-top: 1px solid #1e293b;
+}
+
+.score-value {
+    color: #34d399;
+    font-weight: bold;
+}
+
+.status {
+    color: #a78bfa;
+}
+
+.score-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #7c3aed;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.score-box h3 {
+    color: #c084fc;
+    margin-bottom: 15px;
+}
+
+.score-box p {
+    color: #cbd5e1;
+}
+
+.progress-item {
+    margin-top: 25px;
+}
+
+.progress {
+    width: 100%;
+    height: 12px;
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #06b6d4, #7c3aed);
+    border-radius: 20px;
+}
+/* ================================
+   NEURONEXORA AI CHAT
+================================ */
+
+.ai-chat-section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 30px;
+    min-height: 650px;
+    background: rgba(5, 15, 40, 0.95);
+    border: 1px solid rgba(0, 200, 255, 0.35);
+    border-radius: 24px;
+    box-shadow: 0 0 40px rgba(0, 150, 255, 0.12);
+}
+
+.ai-chat-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ai-chat-header h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #00d9ff;
+}
+
+.ai-chat-header p {
+    color: #aebbd0;
+    font-size: 15px;
+}
+
+/* Chat messages */
+
+.chat-area {
+    height: 420px;
+    overflow-y: auto;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 20, 0.45);
+    border-radius: 18px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 15px 18px;
+    margin: 15px 0;
+    border-radius: 16px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.ai-message {
+    margin-right: auto;
+    background: linear-gradient(135deg, #102b55, #14204d);
+    color: #ffffff;
+    border-left: 3px solid #00d9ff;
+}
+
+.user-message {
+    margin-left: auto;
+    background: linear-gradient(135deg, #4c36d9, #713cff);
+    color: white;
+}
+
+/* Input */
+
+.chat-input-area {
+    display: flex;
+    gap: 12px;
+    padding: 8px;
+    background: #111a35;
+    border: 1px solid rgba(0, 210, 255, 0.4);
+    border-radius: 35px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    padding: 14px 18px;
+}
+
+.chat-input-area input::placeholder {
+    color: #7f8da8;
+}
+
+.chat-input-area button {
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00d9ff, #6b4cff);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat-input-area button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .ai-chat-section {
+        margin: 40px 15px;
+        padding: 18px;
+    }
+
+    .chat-area {
+        height: 400px;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+
+    .ai-chat-header h2 {
+        font-size: 24px;
+    }
+}
+/* ==========================================
+   NEURONEXORA AI - AI RESULT BOXES
+   ========================================== */
+
+.analysis-result,
+.comparison-result,
+.xai-result,
+.final-decision-result {
+    margin: 25px auto;
+    padding: 25px;
+    max-width: 900px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    line-height: 1.7;
+    color: #f1f5f9;
+}
+
+.analysis-result h3,
+.comparison-result h3,
+.xai-result h3,
+.final-decision-result h3 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.analysis-result p,
+.comparison-result p,
+.xai-result p,
+.final-decision-result p {
+    white-space: normal;
+}
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .feature-container,
+    .analysis-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .comparison-table {
+        overflow-x: auto;
+    }
+
+    .chat-input-area {
+        width: 100%;
+    }
+
+    .analysis-result,
+    .comparison-result,
+    .xai-result,
+    .final-decision-result {
+        margin: 20px 10px;
+        padding: 18px;
+    }
+}
+/* ==========================================
+   NEURONEXORA AI - CHATGPT STYLE CHAT
+   ========================================== */
+
+.ai-chat-section {
+    min-height: 700px;
+    padding: 50px 20px;
+    background: #0f172a;
+}
+
+.ai-chat-header {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.ai-chat-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.chat-area {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    margin: auto;
+    padding: 25px;
+    overflow-y: auto;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    background: #111827;
+}
+
+.message {
+    max-width: 75%;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.ai-message {
+    margin-right: auto;
+    background: #1e293b;
+    color: #f8fafc;
+}
+
+.user-message {
+    margin-left: auto;
+    background: #2563eb;
+    color: white;
+}
+
+.chat-input-area {
+    max-width: 900px;
+    margin: 20px auto 0;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #475569;
+    background: #1e293b;
+    color: white;
+    outline: none;
+}
+
+.chat-input-area button {
+    width: 55px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-input-area button:hover {
+    opacity: 0.85;
+}
+/* ==========================================
+   NEURONEXORA - CHAT SIDEBAR
+   ========================================== */
+
+.chat-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    padding: 25px 15px;
+    background: #111827;
+    border-right: 1px solid #334155;
+    z-index: 1000;
+}
+
+.chat-sidebar h3 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.chat-sidebar button {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #e5e7eb;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.chat-sidebar button:hover {
+    background: #1e293b;
+}
+
+body {
+    padding-left: 230px;
+}
+@media (max-width: 768px) {
+
+    .chat-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #334155;
+    }
+
+    body {
+        padding-left: 0;
+    }
+
+    .chat-sidebar button {
+        display: inline-block;
+        width: auto;
+        margin-right: 5px;
+    }
+}
+.chat-sidebar button:first-of-type {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+}
+
+.chat-sidebar button:first-of-type:hover {
+    background: #1d4ed8;
+}
+
+.chat-sidebar h3 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.chat-input-area {
+    background: #111827;
+    border: 1px solid #334155;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.chat-input-area input {
+    border: none;
+    background: transparent;
+    padding: 14px;
+    font-size: 15px;
+}
+
+.chat-input-area input:focus {
+    outline: none;
+}
+
+.chat-input-area button {
+    min-width: 50px;
+    height: 48px;
+    border-radius: 12px;
+}
+/* AI TYPING INDICATOR */
+
+.typing {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.typing span {
+    width: 7px;
+    height: 7px;
+    background: #94a3b8;
+    border-radius: 50%;
+    animation: typing 1.2s infinite;
+}
+
+.typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+/* ==========================================
+   NEURONEXORA - PROFESSIONAL HOME
+   ========================================== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero .tagline {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 82px);
+    margin: 15px 0;
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 4vw, 34px);
+    margin-bottom: 25px;
+}
+
+.hero .description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.hero button {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* ==========================================
+   NEURONEXORA - PROFESSIONAL FEATURE CARDS
+   ========================================== */
+
+.features {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.feature-container {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 30px 20px;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    background: #111827;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card span {
+    font-size: 38px;
+}
+
+.feature-card h3 {
+    margin: 18px 0 10px;
+}
+
+.feature-card p {
+    line-height: 1.6;
+}
+/* ==========================================
+   NEURONEXORA - PROFILE CARD
+   ========================================== */
+
+.profile-section {
+    padding: 80px 20px;
+}
+
+.profile-form {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    background: #111827;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    background: #1e293b;
+    color: white;
+    box-sizing: border-box;
+}
+
+.profile-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* ==========================================
+   NEURONEXORA - DECISION ANALYSIS
+   ========================================== */
+
+.analysis-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.analysis-container {
+    max-width: 1100px;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.option-card {
+    padding: 30px 20px;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    background: #111827;
+    transition: 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-6px);
+}
+
+.option-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.score {
+    margin-top: 20px;
+    font-weight: 600;
+}
+/* ==========================================
+   NEURONEXORA - DECISION DASHBOARD
+   ========================================== */
+
+.dashboard-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.comparison-table {
+    max-width: 900px;
+    margin: 40px auto;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #111827;
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    padding: 18px 20px;
+    text-align: left;
+}
+
+.table-header {
+    background: #1e293b;
+    font-weight: 700;
+}
+
+.table-row {
+    border-top: 1px solid #334155;
+}
+
+.score-value {
+    font-weight: 700;
+}
+
+.status {
+    color: #94a3b8;
+}
+
+.score-box {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    background: #111827;
+    text-align: left;
+}
+
+.progress {
+    height: 10px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    background: #2563eb;
+}
+/* Professional AI Chat */
+.ai-chat-section {
+    background: #0b1120;
+}
+
+.ai-message {
+    border: 1px solid #334155;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.user-message {
+    box-shadow: 0 4px 15px rgba(37,99,235,0.2);
+}
+
+.chat-area::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+.chat-input-area input::placeholder {
+    color: #94a3b8;
+}
